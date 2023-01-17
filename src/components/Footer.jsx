@@ -6,7 +6,7 @@ export function Footer() {
           © {new Date().getFullYear()} Copyright Text
           <a 
             className="grey-text text-lighten-4 right" 
-            href="https://github.com/fckzor/react-movies"
+            href="https://github.com/fckzor/react-shop"
             target="_blank"
             rel="noreferrer"
           >
