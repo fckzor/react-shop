@@ -1,20 +1,26 @@
+import {useContext}  from 'react'
+import {ShopContext} from '../context'
+
 export function BasketItem(props) {
   const {
     id, 
     title, 
     price, 
-    quantity, 
-    handleBasketDeleteItem = Function.prototype,
-    increementQuantity = Function.prototype,
-    decreementmQuantity = Function.prototype,
+    quantity,
   } = props
+
+  const {
+    removeFromBasket,
+    increementQuantity,
+    decreementQuantity,
+  } = useContext(ShopContext)
 
   return (
     <li className="collection-item">
       {title} 
       <span 
         className="basket-quantity"
-        onClick={() => decreementmQuantity(id)}
+        onClick={() => decreementQuantity(id)}
       >
         <i className="material-icons">remove</i>
       </span>
@@ -29,7 +35,7 @@ export function BasketItem(props) {
       
       <span 
         className="secondary-content basket-delete"
-        onClick={() => handleBasketDeleteItem(id)}
+        onClick={() => removeFromBasket(id)}
       >
         <i className="material-icons">close</i>
       </span>
