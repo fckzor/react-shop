@@ -11,3 +11,71 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+nav {
+  background-color: unset;
+  height: auto;
+}
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.content {
+  position: relative;
+  min-height: calc(100vh - 70px);
+  padding: 60px 0;
+}
+.goods {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.card-content {
+  height: 100%;
+}
+.card-price {
+  font-size: 20px;
+}
+.cart {
+  position: fixed;
+  top: 200px;
+  right: 10%;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+.basket-list {
+  position: fixed;
+  width: 100%;
+  max-width: 800px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+}
+.basket-close, .basket-delete {
+  cursor: pointer;
+}
+.basket-quantity {
+  display: inline-block;
+  padding: 0 6px;
+  cursor: pointer;
+  vertical-align: middle;
+  color: #26a69a;
+  user-select: none;
+}
